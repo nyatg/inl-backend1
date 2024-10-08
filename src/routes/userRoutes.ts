@@ -9,17 +9,6 @@ interface User {
     email: string;
 }
 
-//Create a new user
-// router.post('/users', async (req: Request<{},{}, User>, res: Response) => {
-//     const { name, email } = req.body;
-//     try {
-//         const newUser = await pool.query('INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *', [name, email]);
-//         res.json(newUser.rows[0]);
-//     } catch (error) {
-//         res.status(500).json({ error: 'Failed to create user' });
-//     }
-// });
-
 router.post('/users', async (req: Request<{},{}, User>, res: Response) => {
     const { name, email } = req.body;
     try {
